@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import '../profile.css';
+
 const Profile = (props) => {
     const { handleLogout, user } = props;
     const { id, name, email, exp } = user;
