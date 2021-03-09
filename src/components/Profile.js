@@ -16,14 +16,14 @@ const Profile = (props) => {
     }
 
     const userData = user ?
-    (<div>
+    (<div className="profile-container">
         <div className="profile-header-container">
             <div className="profile-pic-container">user-pic</div>
             <div className="user-name-container">Name: {name}</div>
         </div>
         <div className="user-info-container">
-            <p>Email: {email}</p>
-            <p>ID: {id}</p>
+            <p>Email: <br /> {email}</p>            
+            <p>ID: <br /> {id}</p>
         </div>
         <div className="projects-container">
             <h1>Profile</h1>
