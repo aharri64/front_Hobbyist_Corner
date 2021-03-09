@@ -15,10 +15,17 @@ const Profile = (props) => {
 
     const userData = user ?
     (<div>
-        <h1>Profile</h1>
-        <p>Name: {name}</p>
-        <p>Email: {email}</p>
-        <p>ID: {id}</p>
+        <div className="profile-header-container">
+            <div className="profile-pic-container">user-pic</div>
+            <div className="user-name-container">Name: {name}</div>
+        </div>
+        <div className="user-info-container">
+            <p>Email: {email}</p>
+            <p>ID: {id}</p>
+        </div>
+        <div className="projects-container">
+            <h1>Profile</h1>
+        </div>
     </div>) : <h2>Loading...</h2>
 
     const errorDiv = () => {
