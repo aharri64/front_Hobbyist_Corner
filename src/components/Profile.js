@@ -21,13 +21,26 @@ const Profile = (props) => {
             <div className="profile-pic-container">user-pic</div>
             <div className="user-name-container">Name: {name}</div>
         </div>
+        <div className="profile-pic-btn-control">
+            <button className="update-profile">Update Profile!</button>
+        </div>
+        <div className="user-info-title">
+            {name}'s info:
+        </div>
         <div className="user-info-container">
-            <p>Email: <br /> {email}</p>            
-            <p>ID: <br /> {id}</p>
+            <div>Email: <br /> {email}</div>            
+            <div>ID: <br /> {id}</div>
+        </div>
+        <div className="posts-title">
+            {name}'s posts:
         </div>
         <div className="projects-container">
-            <h1>Profile</h1>
+            <h1>Posts</h1>
         </div>
+        <div className="comments-container">
+            <h1>Comments</h1>
+        </div>
+        <button className="add-comment-btn">Add Comment</button>
     </div>) : <h2>Loading...</h2>
 
     const errorDiv = () => {
