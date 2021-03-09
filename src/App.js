@@ -15,6 +15,8 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
+import Search from './components/Search';
+
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
@@ -22,7 +24,7 @@ const PrivateRoute = ({ component: Component, ...rest}) => {
   return <Route {...rest} render={(props) => {
     return token ? <Component {...rest} {...props} /> : <Redirect to="/login"/>
   }} />
-}
+}  
 
 function App() {
   // Set state values
@@ -57,6 +59,8 @@ function App() {
       setIsAuthenticated(false);
     }
   }
+  
+  
 
   return (
     <div className="App">
@@ -69,6 +73,7 @@ function App() {
             path="/login"
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
           />
+          <Route path='/' component={Search} />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
