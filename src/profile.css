@@ -1,0 +1,80 @@
+.profile-header-container {
+    background-color: lightgrey;
+    position: relative;
+    margin-top: 0px;
+    
+    width: 90%;
+    height: 200px; /* Set the fixed height of the footer here */
+    line-height: 100px; /* Vertically center the text there */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    border-radius: 15px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info-title {
+    margin-top: 20px;
+}
+
+.user-info-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;    
+    text-align: left;
+    background-color: grey;
+    width: 90%;
+    padding: 30px;
+    min-height: 100px;
+    border-radius: 15px;
+}
+
+.projects-container {
+    background-color: yellow;
+    display: relative;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    width: 90%;    
+}
+
+.posts-title {
+    margin-top: 20px;
+}
+
+.profile-pic-btn-control {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.update-profile {
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.profile-pic-container {
+    background-color: darkgrey;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.comments-container {
+    background-color: darkorange;
+    width: 90%;
+}
+
+.add-comment-btn {
+    margin-bottom: 80px;
+}
