@@ -6,10 +6,10 @@ import '../profile.css';
 const Profile = (props) => {
     const { handleLogout, user } = props;
     const { id, name, email, exp } = user;
-   const expirationTime = new Date(exp * 1000);
+    const expirationTime = new Date(exp * 1000);
     let currentTime = Date.now();
 
-   // make a condition that compares exp and current time
+    // make a condition that compares exp and current time
     if (currentTime >= expirationTime) {
         handleLogout();
         alert('Session has ended. Please login to continue.');
