@@ -59,7 +59,7 @@ class Search extends React.Component {
 					<input
 						type="text"
                         name="query"
-						value={query}
+						value={this.state.query}
 						id="search-input"
 						placeholder="Search..."
                         onChange={this.handleOnInputChange}
