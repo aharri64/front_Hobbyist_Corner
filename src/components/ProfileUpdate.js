@@ -65,7 +65,7 @@ const ProfileUpdate = (props) => {
                             <input type="company" name="company" value={company} onChange={handleCompany} className="form-control" />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="website">Website</label>
+                            <label htmlFor="website">URL</label>
                             <input type="website" name="website" value={website} onChange={handleWebsite} className="form-control" />
                         </div>
                         <div className="form-group">
