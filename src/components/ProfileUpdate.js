@@ -6,6 +6,12 @@ import '../profile.css';
 const ProfileUpdate = (props) => {
     const [company, setCompany] = useState('');
     const [skills, setSkills] = useState('');
+    const [location, setLocation] = useState('');
+    const [bio, setBio] = useState('');
+    const [youtube, setYoutube] = useState('');
+    const [twitter, setTwitter] = useState('');
+    const [facebook, setFacebook] = useState('');
+    const [instagram, setInstagram] = useState('');
 
     const handleCompany = (e) => {
         setCompany(e.target.value);
@@ -13,6 +19,30 @@ const ProfileUpdate = (props) => {
 
     const handleSkills = (e) => {
         setSkills(e.target.value);
+    }
+
+    const handleLocation = (e) => {
+        setLocation(e.target.value);
+    }
+
+    const handleBio = (e) => {
+        setBio(e.target.value);
+    }
+
+    const handleYoutube = (e) => {
+        setYoutube(e.target.value);
+    }
+
+    const handleTwitter = (e) => {
+        setTwitter(e.target.value);
+    }
+
+    const handleFacebook = (e) => {
+        setFacebook(e.target.value);
+    }
+
+    const handleInstagram = (e) => {
+        setInstagram(e.target.value);
     }
 
     const handleSubmit = (e) => {
@@ -49,6 +79,22 @@ const ProfileUpdate = (props) => {
                         <div className="form-group">
                             <label htmlFor="skills">Skills</label>
                             <input type="skills" name="skills" value={skills} onChange={handleSkills} className="form-control" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="location">Location</label>
+                            <input type="location" name="location" value={location} onChange={handleLocation} className="form-control" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="bio">Bio</label>
+                            <input type="bio" name="bio" value={bio} onChange={handleBio} className="form-control" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="youtube">Youtube</label>
+                            <input type="youtube" name="bio" value={youtube} onChange={handleYoutube} className="form-control" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="youtube">Youtube</label>
+                            <input type="youtube" name="bio" value={youtube} onChange={handleYoutube} className="form-control" />
                         </div>
                         <button type="submit" className="btn btn-primary float-right">Submit Update</button>
                     </form>
