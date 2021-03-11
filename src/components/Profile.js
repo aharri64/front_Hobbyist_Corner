@@ -31,18 +31,18 @@ const Profile = (props) => {
             {name}'s info:
         </div>
         <div className="user-info-container">
-            <div>Email: <br /> {email}</div>            
-            <div>ID: <br /> {id}</div>
-            <div>Location: <br /> {profile.location} </div>
-            <div>Bio: <br /> {profile.bio} </div>
+            <div className="user-info-section-container">
+                <div className="user-info">Email: <br /> {email}</div>            
+                <div className="user-info">ID: <br /> {id}</div>
+                <div className="user-info">Location: <br /> {profile.location} </div>
+            </div>
+            <div className="user-info-section-container">
+                <div className="user-info">Bio: <br /> {profile.bio} </div>
+            </div>
             {/* <div>Skills: {profile.skills.map()}</div> */}
-            <div>Company: <br /> {profile.company}</div>
-            <div>Website: <br /> {profile.website}</div>
-            <div>
-                Social: 
-                <div>
-                    {/* youtube: <br /> {profile.social[0]}   */}
-                </div>
+            <div className="user-info-section-container bottom-info">
+                <div className="user-info">Company: <br /> {profile.company}</div>
+                <div className="user-info">URL: <br /> {profile.website}</div>
             </div>
         </div>
         <div className="posts-title">
