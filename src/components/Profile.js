@@ -5,10 +5,13 @@ import '../profile.css';
 
 const Profile = (props) => {
     const { handleLogout, user } = props;
-    const { id, name, email, exp } = user;
+    const { id, name, email, exp, profile } = user;
+    console.log(user)
+    // const { company, website, location, bio, skills, youtube, twitter, facebook, linkedin, instagram } = component;
     const expirationTime = new Date(exp * 1000);
     let currentTime = Date.now();
-
+    console.log("company", "====>")
+    console.log(profile.company)
     // make a condition that compares exp and current time
     if (currentTime >= expirationTime) {
         handleLogout();
@@ -30,6 +33,17 @@ const Profile = (props) => {
         <div className="user-info-container">
             <div>Email: <br /> {email}</div>            
             <div>ID: <br /> {id}</div>
+            <div>Location: <br /> {profile.location} </div>
+            <div>Bio: <br /> {profile.bio} </div>
+            {/* <div>Skills: {profile.skills.map()}</div> */}
+            <div>Company: <br /> {profile.company}</div>
+            <div>Website: <br /> {profile.website}</div>
+            <div>
+                Social: 
+                <div>
+                    {/* youtube: <br /> {profile.social[0]}   */}
+                </div>
+            </div>
         </div>
         <div className="posts-title">
             {name}'s posts:
@@ -58,5 +72,7 @@ const Profile = (props) => {
     );
 
 }
+
+
 
 export default Profile;
