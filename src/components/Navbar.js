@@ -5,7 +5,7 @@ const Navbar = (props) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <Link className="navbar-brand" to="/">MERN Auth</Link>
+                <Link className="navbar-brand" to="/">H. C.</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="#navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -21,6 +21,15 @@ const Navbar = (props) => {
                     {
                         props.isAuth 
                         ? <ul className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                                <NavLink className="nav-link"
+                                to="/profileUpdate">Update Profile</NavLink>
+                            </li>
+                            
+                            <li className="nav-item">
+                                <NavLink className="nav-link"
+                                to="/search">Search</NavLink>
+                            </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link"  to="/profile">Profile</NavLink>
                             </li>
@@ -29,6 +38,7 @@ const Navbar = (props) => {
                             </li>
                         </ul>
                         : <ul className="navbar-nav ml-auto">
+                        
                             <li className="nav-item">
                                 <NavLink className="nav-link"
                                 to="/search">Search</NavLink>
@@ -39,6 +49,7 @@ const Navbar = (props) => {
                             <li className="nav-item">
                                 <NavLink className="nav-link"  to="/login">Login</NavLink>
                             </li>
+                            
                         </ul>
                     }
                 </div>

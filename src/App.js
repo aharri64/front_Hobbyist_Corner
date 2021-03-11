@@ -7,6 +7,9 @@ import setAuthToken from './utils/setAuthToken';
 // CSS
 import './App.css';
 
+// IMAGES
+import logo from './assets/logo.png';
+
 // Components
 import Signup from './components/Signup';
 import About from './components/About';
@@ -16,6 +19,7 @@ import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 import Search from './components/Search';
+import ProfileUpdate from './components/ProfileUpdate';
 
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -47,6 +51,7 @@ function App() {
 
   const nowCurrentUser = (userData) => {
     console.log('===> nowCurrent is here.');
+    console.log(userData)
     setCurrentUser(userData);
     setIsAuthenticated(true);
   }
@@ -60,11 +65,9 @@ function App() {
     }
   }
   
-  
-
   return (
     <div className="App">
-      <h1>MERN Authentication</h1>
+      <img src={logo} alt="Hobbyist Corner Logo" height="100px"/>
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
       <div className="container mt-5">
         <Switch>
@@ -76,7 +79,8 @@ function App() {
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
-          <Route path='/' component={Search} />
+          <Route path='/profileUpdate' component={ProfileUpdate}/>
+          <Route path='/search' component={Search} />
         </Switch>
       </div>
       <Footer />
