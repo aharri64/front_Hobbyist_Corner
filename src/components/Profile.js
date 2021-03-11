@@ -31,7 +31,7 @@ const Profile = (props) => {
         <div className="profile-pic-btn-control">
             <button className="update-profile">Update Profile!</button>
         </div>
-        <div className="user-info-title">
+        <div className="title">
             {name}'s info:
         </div>
         <div className="user-info-container">
@@ -49,7 +49,7 @@ const Profile = (props) => {
                 <div className="user-info">URL: <br /> {profile.website}</div>
             </div>
         </div>
-        <div className="posts-title">
+        <div className="title">
             {name}'s posts:
         </div>
         <div className="projects-container">
