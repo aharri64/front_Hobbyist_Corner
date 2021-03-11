@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 import '../profile.css';
+import { Redirect } from 'react-router-dom';
+
+const { REACT_APP_SERVER_URL } = process.env;
+
 
 const ProfileUpdate = (props) => {
     const [company, setCompany] = useState('');
     const [skills, setSkills] = useState('');
+    const [website, setWebsite] = useState('');
     const [location, setLocation] = useState('');
     const [bio, setBio] = useState('');
-    const [youtube, setYoutube] = useState('');
-    const [twitter, setTwitter] = useState('');
-    const [facebook, setFacebook] = useState('');
-    const [instagram, setInstagram] = useState('');
+    
 
     const handleCompany = (e) => {
         setCompany(e.target.value);
+    }
+
+    const handleWebsite = (e) => {
+        setWebsite(e.target.value);
     }
 
     const handleSkills = (e) => {
@@ -29,42 +35,24 @@ const ProfileUpdate = (props) => {
         setBio(e.target.value);
     }
 
-    const handleYoutube = (e) => {
-        setYoutube(e.target.value);
-    }
 
-    const handleTwitter = (e) => {
-        setTwitter(e.target.value);
-    }
-
-    const handleFacebook = (e) => {
-        setFacebook(e.target.value);
-    }
-
-    const handleInstagram = (e) => {
-        setInstagram(e.target.value);
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault(); // at the beginning of a submit function
-        // make sure password and confirm password are equal
-        // password length >= 8 characters
-        if (password === confirmPassword && password.length >= 8) {
-            const newUser = { name, email, password };
-            axios.post(`${REACT_APP_SERVER_URL}/users/register`, newUser)
+        
+        const profileUpdate = { company, skills, website, location, bio };
+            axios.post(`${REACT_APP_SERVER_URL}/users/profile`, profileUpdate)
             .then(response => {
-                console.log('===> Yay, new user');
+                console.log('===> profile updated');
                 console.log(response);
-                setRedirect(true);
+                // setRedirect(true);
             })
-            .catch(error => console.log('===> Error in Signup', error));
-        } else {
-            if (password !== confirmPassword) return alert('Passwords don\'t match');
-            alert('Password needs to be at least 8 characters. Please try again.');
-        }
+            .catch(error => console.log('===> Error in Profile', error));
+    
+        
     }
 
-    if (redirect) return <Redirect to="/login" /> // / double check
+    // if (redirect) return <Redirect to="/login" /> // / double check
 
     return (
         <div className="row mt-4">
@@ -77,6 +65,10 @@ const ProfileUpdate = (props) => {
                             <input type="company" name="company" value={company} onChange={handleCompany} className="form-control" />
                         </div>
                         <div className="form-group">
+                            <label htmlFor="website">Website</label>
+                            <input type="website" name="website" value={website} onChange={handleWebsite} className="form-control" />
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="skills">Skills</label>
                             <input type="skills" name="skills" value={skills} onChange={handleSkills} className="form-control" />
                         </div>
@@ -87,14 +79,6 @@ const ProfileUpdate = (props) => {
                         <div className="form-group">
                             <label htmlFor="bio">Bio</label>
                             <input type="bio" name="bio" value={bio} onChange={handleBio} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="youtube">Youtube</label>
-                            <input type="youtube" name="bio" value={youtube} onChange={handleYoutube} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="youtube">Youtube</label>
-                            <input type="youtube" name="bio" value={youtube} onChange={handleYoutube} className="form-control" />
                         </div>
                         <button type="submit" className="btn btn-primary float-right">Submit Update</button>
                     </form>
