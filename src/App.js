@@ -47,6 +47,7 @@ function App() {
 
   const nowCurrentUser = (userData) => {
     console.log('===> nowCurrent is here.');
+    console.log(userData)
     setCurrentUser(userData);
     setIsAuthenticated(true);
   }
@@ -60,8 +61,6 @@ function App() {
     }
   }
   
-  
-
   return (
     <div className="App">
       <h1>MERN Authentication</h1>
@@ -73,10 +72,10 @@ function App() {
             path="/login"
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
           />
-          <Route path='/' component={Search} />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
+          <Route path='/' component={Search} />
         </Switch>
       </div>
       <Footer />
