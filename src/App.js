@@ -47,6 +47,7 @@ function App() {
 
   const nowCurrentUser = (userData) => {
     console.log('===> nowCurrent is here.');
+    console.log(userData)
     setCurrentUser(userData);
     setIsAuthenticated(true);
   }
@@ -60,8 +61,6 @@ function App() {
     }
   }
   
-  
-
   return (
     <div className="App">
       <h1>MERN Authentication</h1>
