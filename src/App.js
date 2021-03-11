@@ -16,6 +16,7 @@ import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 import Search from './components/Search';
+import ProfileUpdate from './components/ProfileUpdate';
 
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -76,7 +77,8 @@ function App() {
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
-          <Route path='/' component={Search} />
+          <Route path='/profileUpdate' component={ProfileUpdate}/>
+          <Route path='/search' component={Search} />
 
         </Switch>
       </div>
