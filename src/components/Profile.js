@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// CSS
 import '../profile.css';
+
+//IMAGES
+import croppedLogo from '../assets/cropped-logo.png';
 
 const Profile = (props) => {
     const { handleLogout, user } = props;
@@ -21,7 +25,7 @@ const Profile = (props) => {
     const userData = user ?
     (<div className="profile-container">
         <div className="profile-header-container">
-            <div className="profile-pic-container">user-pic</div>
+            <div ><img className="profile-pic-container" src={croppedLogo} alt="profile-pic" /></div>
             <div className="user-name-container">Name: {name}</div>
         </div>
         <div className="profile-pic-btn-control">
