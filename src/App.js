@@ -7,6 +7,9 @@ import setAuthToken from './utils/setAuthToken';
 // CSS
 import './App.css';
 
+// IMAGES
+import logo from './assets/logo.png';
+
 // Components
 import Signup from './components/Signup';
 import About from './components/About';
@@ -64,7 +67,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1>MERN Authentication</h1>
+      <img src={logo} alt="Hobbyist Corner Logo" height="100px"/>
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
       <div className="container mt-5">
         <Switch>
