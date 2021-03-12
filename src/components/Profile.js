@@ -27,9 +27,6 @@ const Profile = (props) => {
             <div ><img className="profile-pic-container" src={croppedLogo} alt="profile-pic" /></div>
             <div className="user-name-container">Name: {name}</div>
         </div>
-        <div className="profile-pic-btn-control">
-            <button className="profile-btn">Update Profile!</button>
-        </div>
         <div className="title">
             {name}'s info:
         </div>
