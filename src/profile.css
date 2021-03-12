@@ -71,11 +71,6 @@ button {
     width: 90%;    
 }
 
-.profile-pic-btn-control {
-    margin-right: 820px;
-    margin-top: 5px;
-}
-
 .update-profile {
     height: 30px;
     padding: 0px;
@@ -96,7 +91,7 @@ button {
     width: 90%;
 }
 
-.profile-btn {
+.comment-btn {
     outline: none;
     font-weight: 800;
     transition: color .5s;
@@ -109,22 +104,19 @@ button {
     box-shadow: 0 5px rgb(37, 34, 61);
     font-size: 20px;
     min-width: 30px;  
+    margin-top: 5px;
+    margin-bottom: 80px;
 }
 
-.profile-btn:hover {
+.comment-btn:hover {
     color: rgb(196, 196, 196);
     background-color: rgb(108, 142, 150);  
 }
 
-.profile-btn:active {
+.comment-btn:active {
     box-shadow: 0 2px rgb(32, 29, 53);
     transform: translateY(4px);
     background-color: lightgrey;
-}
-
-.comment-btn {
-    margin-top: 5px;
-    margin-bottom: 80px;
 }
 
 .profile-header-control {
