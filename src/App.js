@@ -17,6 +17,7 @@ import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 import Search from './components/Search';
 import ProfileUpdate from './components/ProfileUpdate';
+import PostUpdate from './components/PostUpdate';
 
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -76,6 +77,7 @@ function App() {
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
           <Route path='/profileUpdate' component={ProfileUpdate}/>
+          <Route path="/postUpdate" component={PostUpdate} />
           <Route path='/search' component={Search} />
         </Switch>
       </div>
