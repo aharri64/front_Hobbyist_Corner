@@ -12,3 +12,4 @@ html {
 }
 
 a { color: rgb(157, 157, 157) }
+a:hover { color: white; }
