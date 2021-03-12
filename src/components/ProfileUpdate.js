@@ -60,6 +60,7 @@ const ProfileUpdate = (props) => {
                 <div className="card card-body">
                     <h2 className="py-2">Update Your Profile</h2>
                     <form onSubmit={handleSubmit}>
+                        <button type="submit" className="btn btn-primary float-right">Submit Update</button>
                         <div className="form-group">
                             <label htmlFor="company">Company</label>
                             <input type="company" name="company" value={company} onChange={handleCompany} className="form-control" />
