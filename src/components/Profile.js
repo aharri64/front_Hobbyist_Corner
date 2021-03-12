@@ -28,7 +28,7 @@ const Profile = (props) => {
             <div className="user-name-container">Name: {name}</div>
         </div>
         <div className="profile-pic-btn-control">
-            <button className="update-profile">Update Profile!</button>
+            <button className="profile-btn">Update Profile!</button>
         </div>
         <div className="title">
             {name}'s info:
@@ -57,7 +57,7 @@ const Profile = (props) => {
         <div className="comments-container">
             <h1>Comments</h1>
         </div>
-        <button className="add-comment-btn">Add Comment</button>
+        <button className="profile-btn comment-btn">Add Comment</button>
     </div>) : <h2>Loading...</h2>
 
     const errorDiv = () => {
