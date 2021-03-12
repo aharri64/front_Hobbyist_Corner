@@ -9,12 +9,12 @@ import croppedLogo from '../assets/cropped-logo.png';
 
 const Profile = (props) => {
     const { handleLogout, user } = props;
-    const { id, name, email, exp, profile } = user;
+    const { id, name, email, avatar, exp, profile } = user;
     console.log(user)
     const expirationTime = new Date(exp * 1000);
     let currentTime = Date.now();
     console.log("company", "====>")
-    console.log(profile.company)
+    console.log(profile)
     // make a condition that compares exp and current time
     if (currentTime >= expirationTime) {
         handleLogout();
