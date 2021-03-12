@@ -1,3 +1,7 @@
+button {
+    outline: none;
+    }
+
 .profile-header-container {
     background-color: lightgrey;
     position: relative;
@@ -67,13 +71,6 @@
     width: 90%;    
 }
 
-.profile-pic-btn-control {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-
-}
-
 .update-profile {
     height: 30px;
     padding: 0px;
@@ -94,6 +91,35 @@
     width: 90%;
 }
 
-.add-comment-btn {
+.comment-btn {
+    outline: none;
+    font-weight: 800;
+    transition: color .5s;
+    transition: background-color .7s;
+    color: white;
+    background-color: rgb(97, 123, 145);
+    border: solid rgb(197, 197, 197);
+    border-radius: 15px;
+    border-width: 2px;
+    box-shadow: 0 5px rgb(37, 34, 61);
+    font-size: 20px;
+    min-width: 30px;  
+    margin-top: 5px;
     margin-bottom: 80px;
+}
+
+.comment-btn:hover {
+    color: rgb(196, 196, 196);
+    background-color: rgb(108, 142, 150);  
+}
+
+.comment-btn:active {
+    box-shadow: 0 2px rgb(32, 29, 53);
+    transform: translateY(4px);
+    background-color: lightgrey;
+}
+
+.profile-header-control {
+    display: flex;
+    align-items: flex-start;
 }
