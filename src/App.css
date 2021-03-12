@@ -10,3 +10,5 @@ html {
   height: 40px; /* Set the fixed height of the footer here */
   line-height: 40px; /* Vertically center the text there */
 }
+
+a { color: rgb(157, 157, 157) }
