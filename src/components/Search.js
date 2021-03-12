@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-
+import '../Search.css'
 
 class Search extends React.Component {
 	constructor( props ) {
@@ -54,7 +54,7 @@ class Search extends React.Component {
 		return (
 			<div className="container">
 				{/*Heading*/}
-				<h2 className="heading">Search: All Projects</h2>
+				<h2 className="heading text-color">Search: All Projects</h2>
 				{/*Search Input*/}
 				<label className="search-label" htmlFor="search-input">
 					<input

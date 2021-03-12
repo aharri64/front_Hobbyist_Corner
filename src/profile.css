@@ -20,8 +20,11 @@
     padding: 10px;
 }
 
-.user-info-title {
+.title {
     margin-top: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .user-info-container {
@@ -34,6 +37,7 @@
     padding: 30px;
     min-height: 100px;
     border-radius: 15px;
+    color: white;
 }
 
 .user-info-section-container {
@@ -61,10 +65,6 @@
     justify-content: center;
     margin-top: 5px;
     width: 90%;    
-}
-
-.posts-title {
-    margin-top: 20px;
 }
 
 .profile-pic-btn-control {
