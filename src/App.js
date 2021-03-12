@@ -6,6 +6,8 @@ import setAuthToken from './utils/setAuthToken';
 
 // CSS
 import './App.css';
+const REACT_APP_SERVER_URL= process.env.REACT_APP_SERVER_URL
+console.log(REACT_APP_SERVER_URL)
 
 // Components
 import Signup from './components/Signup';
