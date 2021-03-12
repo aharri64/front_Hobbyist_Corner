@@ -23,6 +23,10 @@ const Navbar = (props) => {
                         ? <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                                 <NavLink className="nav-link"
+                                to="/postUpdate">Make a Post</NavLink>
+                            </li>
+                        <li className="nav-item">
+                                <NavLink className="nav-link"
                                 to="/profileUpdate">Update Profile</NavLink>
                             </li>
                             
