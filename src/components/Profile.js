@@ -11,7 +11,6 @@ const Profile = (props) => {
     const { handleLogout, user } = props;
     const { id, name, email, exp, profile } = user;
     console.log(user)
-    // const { company, website, location, bio, skills, youtube, twitter, facebook, linkedin, instagram } = component;
     const expirationTime = new Date(exp * 1000);
     let currentTime = Date.now();
     console.log("company", "====>")
