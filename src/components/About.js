@@ -16,33 +16,35 @@ const About = () => {
             </p>
             <hr />
             <h3 className="sub-title text-color">Meet the team!</h3>
-            <div>
-                <div className="name-container about-containers">
-                    <div className="text-color">Amir Herrison</div>
-                    <div className="text-color">Leo Vincent</div>
-                    <div className="text-color">Scott Sherwood</div>
-                </div>
-                <div className="pic-container about-containers">
-                    <div><img className="team-pics" src={amir} alt="Photo of Amir Herrison" /></div>
-                    <div><img className="team-pics" src={leo} alt="Photo of Leo Vincent" /></div>
-                    <div><img className="team-pics" src={scott} alt="Photo of Scott Sherwood" /></div>
-                </div>  
-                <div className="link-container about-containers">
-                    <ul>
-                        <li><a href="https://github.com/aharri64">Amir's Github</a></li> 
-                        <li><a href="https://www.linkedin.com/in/amir-scott-harrison/">Amir's LinkedIn</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="https://github.com/leov1963">Leo's Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/leovincent-tech/">Leo's LinkedIn</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="https://github.com/scott95100">Scott's Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/scott-sherwood-515114204/">Scott's LinkedIn</a></li>
-                    </ul>
+            <div className="meet-team-control">
+                
+                    <div className="amir-container about-containers">
+                        <div className="text-color">Amir Herrison</div>
+                        <div><img className="team-pics" src={amir} alt="Amir Herrison" /></div>
+                        <ul>
+                            <li><a href="https://github.com/aharri64">Amir's Github</a></li> 
+                            <li><a href="https://www.linkedin.com/in/amir-scott-harrison/">Amir's LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div className="leo-container about-containers">
+                        <div className="text-color">Leo Vincent</div>
+                        <div><img className="team-pics" src={leo} alt="Leo Vincent" /></div>
+                        <ul>
+                            <li><a href="https://github.com/leov1963">Leo's Github</a></li>
+                            <li><a href="https://www.linkedin.com/in/leovincent-tech/">Leo's LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div className="scott-container about-containers">
+                        <div className="text-color">Scott Sherwood</div>
+                        <div><img className="team-pics" src={scott} alt="Scott Sherwood" /></div>
+                        <ul>
+                            <li><a href="https://github.com/scott95100">Scott's Github</a></li>
+                            <li><a href="https://www.linkedin.com/in/scott-sherwood-515114204/">Scott's LinkedIn</a></li>
+                        </ul>
+                    </div>
                 </div>             
             </div>
-        </div>
+        
     )
 }
 
