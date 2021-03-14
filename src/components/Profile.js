@@ -11,7 +11,6 @@ import croppedLogo from '../assets/cropped-logo.png';
 const Profile = (props) => {
     const { user } = props;
     console.log(user);
-
     const userInfo = user ?
     (<div className="profile-container">
         <div className="profile-header-container">

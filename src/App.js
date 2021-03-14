@@ -31,7 +31,6 @@ function App() {
 
   useEffect(() => {
   
-
     if (!localStorage.getItem('jwtToken')) {
       setIsAuthenticated(false);
       setAppState({...appState, isLoading: false});
