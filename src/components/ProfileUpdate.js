@@ -8,6 +8,7 @@ const { REACT_APP_SERVER_URL } = process.env;
 
 
 const ProfileUpdate = (props) => {
+    const {user, fetchUser} = props;
     const [company, setCompany] = useState('');
     const [skills, setSkills] = useState('');
     const [website, setWebsite] = useState('');
@@ -35,16 +36,18 @@ const ProfileUpdate = (props) => {
         setBio(e.target.value);
     }
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault(); // at the beginning of a submit function
         
-        const profileUpdate = { company, skills, website, location, bio };
-            axios.post(`${REACT_APP_SERVER_URL}/users/profile`, profileUpdate)
+        const profileUpdate = { company, skills, website, location, bio, id: user.id };
+        console.log(profileUpdate);
+        const token = localStorage.getItem('jwtToken')
+        console.log(token)
+        axios.post(`${REACT_APP_SERVER_URL}/users/profile`, profileUpdate, {headers:{'Authorization': token}})
             .then(response => {
                 console.log('===> profile updated');
                 console.log(response);
+                fetchUser()
                 // setRedirect(true);
             })
             .catch(error => console.log('===> Error in Profile', error));
