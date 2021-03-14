@@ -8,11 +8,9 @@ const { REACT_APP_SERVER_URL } = process.env;
 
 
 const PostUpdate = (props) => {
+    const {user, fetchUser} = props;
     const [image, setImage] = useState('');
     const [name, setName] = useState('');
-    
-    
-
     const handleName = (e) => {
         setName(e.target.value)
     }
@@ -26,17 +24,22 @@ const PostUpdate = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault(); // at the beginning of a submit function
         
-        const postUpdate = { image, name };
-            axios.post(`${REACT_APP_SERVER_URL}/users/post`, postUpdate)
+        const postUpdate = { image, name, id: user.id};
+        console.log(postUpdate);
+        const token = localStorage.getItem('jwtToken')
+        console.log(token)
+            axios.post(`${REACT_APP_SERVER_URL}/users/post`, postUpdate, {headers:{'Authorization': token}})
             .then(response => {
                 console.log('===> post updated');
                 console.log(response);
-                // setRedirect(true);
+                fetchUser()
             })
             .catch(error => console.log('===> Error in Post', error));
     
         
     }
+
+    
 
     // if (redirect) return <Redirect to="/login" /> // / double check
 
