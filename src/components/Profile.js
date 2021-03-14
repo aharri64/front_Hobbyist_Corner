@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 // CSS
 import '../profile.css';
 
@@ -8,45 +9,34 @@ import '../profile.css';
 import croppedLogo from '../assets/cropped-logo.png';
 
 const Profile = (props) => {
-    const { handleLogout, user } = props;
-    const { id, name, email, exp, profile } = user;
-    console.log(user)
-    const expirationTime = new Date(exp * 1000);
-    let currentTime = Date.now();
-    console.log("company", "====>")
-    console.log(profile.company)
-    // make a condition that compares exp and current time
-    if (currentTime >= expirationTime) {
-        handleLogout();
-        alert('Session has ended. Please login to continue.');
-    }
+    const { user } = props;
+    console.log(user);
 
-    const userData = user ?
+    const userInfo = user ?
     (<div className="profile-container">
         <div className="profile-header-container">
             <div ><img className="profile-pic-container" src={croppedLogo} alt="profile-pic" /></div>
-            <div className="user-name-container">Name: {name}</div>
+            <div className="user-name-container">Name: {user.name}</div>
         </div>
         <div className="title">
-            {name}'s info:
+            {user.name}'s info:
         </div>
         <div className="user-info-container">
             <div className="user-info-section-container">
-                <div className="user-info">Email: <br /> {email}</div>            
-                <div className="user-info">ID: <br /> {id}</div>
-                <div className="user-info">Location: <br /> {profile.location} </div>
+                <div className="user-info">Email: <br /> {user.email}</div>
+                <div className="user-info">Location: <br /> {user.location} </div>
             </div>
             <div className="user-info-section-container">
-                <div className="user-info">Bio: <br /> {profile.bio} </div>
+                <div className="user-info">Bio: <br /> {user.bio} </div>
             </div>
             {/* <div>Skills: {profile.skills.map()}</div> */}
             <div className="user-info-section-container bottom-info">
-                <div className="user-info">Company: <br /> {profile.company}</div>
-                <div className="user-info">URL: <br /> {profile.website}</div>
+                <div className="user-info">Company: <br /> {user.company}</div>
+                <div className="user-info">URL: <br /> {user.website}</div>
             </div>
         </div>
         <div className="title">
-            {name}'s posts:
+            {user.name}'s posts:
         </div>
         <div className="projects-container">
             <h1>Posts</h1>
@@ -67,7 +57,7 @@ const Profile = (props) => {
     
     return (
         <div className="text-center pt-4">
-            {user ? userData : errorDiv()}
+            {user ? userInfo : errorDiv()}
         </div>
     );
 
