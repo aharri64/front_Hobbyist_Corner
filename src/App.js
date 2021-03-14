@@ -64,6 +64,7 @@ function App() {
   }
   
   return (
+    
     <div className="App">
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
       <div className="container mt-5">
