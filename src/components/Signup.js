@@ -15,7 +15,6 @@ const Signup = () => {
     const [company, setCompany] = useState('company')
     const [website, setWebsite] = useState('website')
 
-
     const handleName = (e) => {
         setName(e.target.value);
     }
@@ -74,7 +73,7 @@ const Signup = () => {
             <div className="col-md-7 offset-md-3">
                 <div className="card card-body">
                     <h2 className="py-2">Signup</h2>
-                    <form onSubmit={handleSubmit, handleSubmitHidden}>
+                    <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
                             <input type="text" name="name" value={name} onChange={handleName} className="form-control"/>
@@ -91,13 +90,8 @@ const Signup = () => {
                             <label htmlFor="confirmPassword">Confirm Password</label>
                             <input type="password" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPassword} className="form-control"/>
                         </div>
-                        <input type="hidden" value="location" name="location" />
-                        <input type="hidden" value="bio" name="bio" />
-                        <input type="hidden" value="company" name="company" />
-                        <input type="hidden" value="website" name="website" />
                         <button type="submit" className="btn btn-primary float-right">Submit</button>
-                    </form>
-                    
+                    </form>                  
                 </div>
             </div>
         </div>
