@@ -123,3 +123,13 @@ button {
     display: flex;
     align-items: flex-start;
 }
+
+html {
+    background-image: url('http://cascadiasfault.com/wp-content/uploads/2020/06/create-logo-color-uncategorized-stunning-how-to-coloring-book-app-adobe-free-pages-for-kids.jpg');
+    background-color: black;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    position: relative;
+  }
