@@ -48,11 +48,11 @@ const PostUpdate = (props) => {
                     <form onSubmit={handleSubmit}>
                         <button type="submit" className="btn btn-primary float-right">Submit Post</button>
                         <div className="form-group">
-                            <label htmlFor="image">Company</label>
+                            <label htmlFor="image">Image</label>
                             <input type="image" name="image" value={image} onChange={handleImage} className="form-control" />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="name">URL</label>
+                            <label htmlFor="name">Title</label>
                             <input type="name" name="name" value={name} onChange={handleName} className="form-control" />
                         </div>
                         <button type="submit" className="btn btn-primary float-right">Submit Post</button>
