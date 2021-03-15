@@ -8,7 +8,8 @@ const { REACT_APP_SERVER_URL } = process.env;
 
 
 const PostUpdate = (props) => {
-    const {user, fetchUser} = props;
+    // const {user, fetchUser} = props;
+    const {post, fetchPost} =props;
     const [image, setImage] = useState('');
     const [name, setName] = useState('');
     const handleName = (e) => {
@@ -24,15 +25,15 @@ const PostUpdate = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault(); // at the beginning of a submit function
         
-        const postUpdate = { image, name, id: user.id};
+        const postUpdate = { image, name, id: PostUpdate.post};
         console.log(postUpdate);
         const token = localStorage.getItem('jwtToken')
         console.log(token)
-            axios.post(`${REACT_APP_SERVER_URL}/users/post`, postUpdate, {headers:{'Authorization': token}})
+            axios.post(`${REACT_APP_SERVER_URL}/users/newPost`, postUpdate, {headers:{'Authorization': token}})
             .then(response => {
                 console.log('===> post updated');
                 console.log(response);
-                fetchUser()
+                fetchPost()
             })
             .catch(error => console.log('===> Error in Post', error));
     
@@ -52,7 +53,7 @@ const PostUpdate = (props) => {
                         <button type="submit" className="btn btn-primary float-right">Submit Post</button>
                         <div className="form-group">
                             <label htmlFor="image">Image</label>
-                            <input type="image" name="image" value={image} onChange={handleImage} className="form-control" />
+                            <input type="file" name="image" value={image} onChange={handleImage} className="form-control" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="name">Title</label>

@@ -1,0 +1,135 @@
+button {
+    outline: none;
+    }
+
+.profile-header-container {
+    background-color: lightgrey;
+    position: relative;
+    margin-top: 0px;
+    
+    width: 90%;
+    height: 200px; /* Set the fixed height of the footer here */
+    line-height: 100px; /* Vertically center the text there */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    border-radius: 15px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.title {
+    margin-top: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.user-info-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;    
+    text-align: left;
+    background-color: grey;
+    width: 90%;
+    padding: 30px;
+    min-height: 100px;
+    border-radius: 15px;
+    color: white;
+}
+
+.user-info-section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(50, 50, 50, 0.694);
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.bottom-info {
+    margin: 0px;
+}
+
+.user-info {
+    margin: 0px 20px;
+}
+
+.projects-container {
+    background-color: yellow;
+    display: relative;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    width: 90%;    
+}
+
+.update-profile {
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.profile-pic-container {
+    background-color: darkgrey;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.comments-container {
+    background-color: darkorange;
+    width: 90%;
+}
+
+.comment-btn {
+    outline: none;
+    font-weight: 800;
+    transition: color .5s;
+    transition: background-color .7s;
+    color: white;
+    background-color: rgb(97, 123, 145);
+    border: solid rgb(197, 197, 197);
+    border-radius: 15px;
+    border-width: 2px;
+    box-shadow: 0 5px rgb(37, 34, 61);
+    font-size: 20px;
+    min-width: 30px;  
+    margin-top: 5px;
+    margin-bottom: 80px;
+}
+
+.comment-btn:hover {
+    color: rgb(196, 196, 196);
+    background-color: rgb(108, 142, 150);  
+}
+
+.comment-btn:active {
+    box-shadow: 0 2px rgb(32, 29, 53);
+    transform: translateY(4px);
+    background-color: lightgrey;
+}
+
+.profile-header-control {
+    display: flex;
+    align-items: flex-start;
+}
+
+html {
+    background-image: url('http://cascadiasfault.com/wp-content/uploads/2020/06/create-logo-color-uncategorized-stunning-how-to-coloring-book-app-adobe-free-pages-for-kids.jpg');
+    background-color: black;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    position: relative;
+  }

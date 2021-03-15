@@ -19,6 +19,7 @@ import Welcome from './components/Welcome';
 import Search from './components/Search';
 import ProfileUpdate from './components/ProfileUpdate';
 import PostUpdate from './components/PostUpdate';
+import Post from './components/Post';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -93,6 +94,7 @@ function App() {
             <Route path='/postUpdate' component={PostUpdate}/>
             <Route path="/profileUpdate"><ProfileUpdate user={currentUser} fetchUser={fetchUser} /></Route>
             <Route path='/search' component={Search} />
+            <Route path='/post' component={Post}/>
           </Switch>}
         </div>
         <Footer />

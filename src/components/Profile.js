@@ -9,7 +9,7 @@ import '../profile.css';
 import croppedLogo from '../assets/cropped-logo.png';
 
 const Profile = (props) => {
-    const { user } = props;
+    const { user, post } = props;
     console.log(user);
     const userInfo = user ?
     (<div className="profile-container">
@@ -39,6 +39,7 @@ const Profile = (props) => {
         </div>
         <div className="projects-container">
             <h1>Posts</h1>
+            { post }
         </div>
         <div className="comments-container">
             <h1>Comments</h1>
