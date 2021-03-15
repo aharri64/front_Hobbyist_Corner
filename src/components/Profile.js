@@ -34,17 +34,7 @@ const Profile = (props) => {
                 <div className="user-info">URL: <br /> {user.website}</div>
             </div>
         </div>
-        <div className="title">
-            {user.name}'s posts:
-        </div>
-        <div className="projects-container">
-            <h1>Posts</h1>
-            { post }
-        </div>
-        <div className="comments-container">
-            <h1>Comments</h1>
-        </div>
-        <button className="profile-btn comment-btn">Add Comment</button>
+        
     </div>) : <h2>Loading...</h2>
 
     const errorDiv = () => {
