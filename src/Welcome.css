@@ -1,3 +1,8 @@
-.text-color {
+.text {
+    color: white;
+    text-align: center;
+}
+
+.new-link {
     color: white;
 }
